@@ -61,11 +61,11 @@ export default function TextForm(props) {
   // setText("new text");correct way to change the state
   return (
     <>
-    <div className='container' style={{color:props.mode==='dark'?'white':'black'}}>
+    <div className='container' style={{color:props.mode==='dark'?'white':'#042743'}}>
         <h1 className='mb-2'>{props.heading}</h1>
   <div className="mb-3">
     {/* <label for="myBox" class="form-label">Texrarea</label> */}
-    <textarea className="form-control" value= {text} onChange={handleOnChange} style={{backgroundColor:props.mode==='dark'?'#13466e':'white',color:props.mode==='dark'?'white':'black'}} id="myBox" rows="8"></textarea>
+    <textarea className="form-control" value= {text} onChange={handleOnChange} style={{backgroundColor:props.mode==='dark'?'#13466e':'white',color:props.mode==='dark'?'white':'#042743'}} id="myBox" rows="8"></textarea>
     </div>
     <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={handleUpClick}>Convert to Uppercase</button>
     <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={handleLowClick}>Convert to Lowercase</button>
@@ -74,7 +74,7 @@ export default function TextForm(props) {
     {/* <button className='btn btn-primary mx-2' onClick={handlePaste}>Paste</button> */}
     <button disabled={text.length===0} className='btn btn-primary mx-2 my-1' onClick={handleExtraSpaces}>Remove Extra Spaces</button>
     </div>
-    <div className='container my-3' style={{color:props.mode==='dark'?'white':'black'}}>
+    <div className='container my-3' style={{color:props.mode==='dark'?'white':'#042743'}}>
       <h1>Your text Summary</h1>
       <h4>Total number of words and charcters: </h4>
       <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} word, {text.length} characters</p>
